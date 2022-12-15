@@ -29,3 +29,7 @@ insert into teacher values (2,'Chánh',34,'Việt Nam');
 select * from student ;
 select * from class ;
 select * from teacher ;
+
+set SQL_SAFE_UPDATES = 0 ;
+update student set student_name = 'Tiến' where student_name = 'SỸ'
+
