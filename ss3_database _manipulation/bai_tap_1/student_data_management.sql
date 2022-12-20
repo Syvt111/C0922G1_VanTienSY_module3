@@ -1,5 +1,5 @@
-create database if not exists sudent_data_managemnt;
-        use sudent_data_managemnt;
+create database if not exists student_data_management;
+        use student_data_management;
 
         create table class(
         class_id   int         not null auto_increment primary key,
