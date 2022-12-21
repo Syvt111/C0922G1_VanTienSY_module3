@@ -63,7 +63,29 @@ ORDER BY thang ASC;
 
 -- 10.	Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, 
 -- ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem)
-select hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, count(hdct.ma_dich_vu_di_kem) as sl_dich_vu_di_kem, sum(hdct.so_luong*hdct.ma_dich_vu_di_kem) 
-from hop_dong hd join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
-group by hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, count(hdct.ma_dich_vu_di_kem) ;
+SELECT 
+    hd.ma_hop_dong,
+    hd.ngay_lam_hop_dong,
+    hd.ngay_ket_thuc,
+    hd.tien_dat_coc,
+    count(hdct.ma_hop_dong_chi_tiet ) as so_luong_dich_vu_di_kem 
+FROM
+    hop_dong hd
+        JOIN
+    hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
+GROUP BY hd.ma_hop_dong , hd.ngay_lam_hop_dong , hd.ngay_ket_thuc , hd.tien_dat_coc ;
+
+select 
+  hd.ma_hop_dong, 
+  hd.ngay_lam_hop_dong, 
+  hd.ngay_ket_thuc, 
+  hd.tien_dat_coc, 
+  sum(hd_ct.so_luong) as so_luong_dich_vu_di_kem 
+from 
+  hop_dong hd 
+  join hop_dong_chi_tiet hd_ct on hd_ct.ma_hop_dong = hd.ma_hop_dong 
+group by 
+  hd.ma_hop_dong 
+order by 
+  hd.ma_hop_dong;
 	
