@@ -15,12 +15,11 @@
 
         .button {
             padding: 5px;
-            margin: 5px ;
+            margin: 5px;
             background: bisque;
         }
     </style>
 </head>
-
 <body>
 <h2>Product Discount Calculator</h2>
 <form method="post" action="/calculate-discount">
@@ -33,8 +32,6 @@
         <input type="text" name="Discount_Percent" placeholder="Discount Percent"/><br/>
         <button class="button" type="submit" id="submit" value="Calculate Discount">Calculate Discount</button>
     </div>
-
-
 </form>
 </body>
 </html>

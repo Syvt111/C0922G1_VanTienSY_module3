@@ -1,0 +1,17 @@
+
+* { /* reset lại margin và padding cho các tag */
+    margin: 0;
+    padding: 0;
+}
+.tableStyle {
+    border: none;
+    width: 100%;
+}
+.tableStyle th {
+    background-color: #cad8fa;
+    padding: 5px;
+}
+.tableStyle td {
+    background-color: #f0e7da;
+    padding: 5px;
+}
