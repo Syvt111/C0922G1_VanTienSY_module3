@@ -2,53 +2,236 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Landing Page Microsoft</title>
-  <link rel="stylesheet" href="../../../bootstrap-5.0.2-dist/css/bootstrap.css">
-
-
+    <title>Microsoft</title>
+    <link rel="stylesheet" href="../../../bootstrap-5.0.2-dist/css/bootstrap.css">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.microsoft.com/">
-            <img src="logoMicro.png">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#"><img src="logoMicro.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link active" aria-current="page" href="#">Surface</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Computer
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Computers for business
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Accessories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Shop now
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link disabled">Support</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit"><a><img src="search_icon.jpg" width="30px"
+                                                                              height="30px" alt="search_icon"></a></button>
             </form>
         </div>
     </div>
 </nav>
+<div style="justify-content: center; background-color: black">
+    <a style="text-align: center; padding-left: 20%" href="#">Grab deals when you shop our holiday sale on select
+        Surface laptops, tablets, and 2-in-1s. Shop deals ></a>
+</div>
+<div>
+    <img src="img1.jpg" height="1080" width="1920" style="height: 100%; width: 100%"/>
+</div>
+<div class="position-absolute img1">
+    <h1 class="text-white">Laptops designed by Microsoft</h1>
+    <h4 class="text-white">Unwrap inspiration this season with Surface laptops and 2-in-1s featuring the best of Windows
+        11.</h4>
+    <div>
+        <span><a class="text-white">Surface Pro 9</a></span>
+        <span><a class="text-white">Surface Laptop 5</a></span>
+        <span><a class="text-white">Explore all</a></span>
+    </div>
+</div>
+<div style="margin: 3%">
+    <h2> Save on Surface deals</h2>
+</div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="slide1.jpg" class="d-block w-30">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Computer 1</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="slide2.jpg" class="d-block w-30">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Computer 2</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div style="margin: 3%">
+    <h2> For all the ways you create </h2>
+</div>
+
+<div class="row" style="margin: 2%">
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:20%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_Compare.jpg?version=3bd1d210-023a-194e-de3b-43199e0c1c8c">
+        </div>
+        <span><a href="#">Compare devices ></a></span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:20%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_Compare.jpg?version=3bd1d210-023a-194e-de3b-43199e0c1c8c">
+        </div>
+        <span><a href="#">Help me choose ></a></span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:15%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_Compare.jpg?version=3bd1d210-023a-194e-de3b-43199e0c1c8c">
+        </div>
+        <span><a href="#">Surface deals ></a></span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:15%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_WhySurface.png?version=026c6a01-80af-1f08-dad1-6de486da3e2e">
+        </div>
+        <span><a href="#">Why Surface ></a></span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:25%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_Compare.jpg?version=3bd1d210-023a-194e-de3b-43199e0c1c8c">
+        </div>
+        <div><a href="#">Surface for Education ></a></div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-6">
+        <div style="padding-left:25%"><img
+                src="https://c.s-microsoft.com/en-us/CMSImages/Surface_F22_Home_LinkNav_Compare.jpg?version=3bd1d210-023a-194e-de3b-43199e0c1c8c">
+        </div>
+        <div><a href="#">Surface for Business ></a></div>
+    </div>
+</div>
+<div style="margin: 3%">
+    <div> 2-in-1 PCs</div>
+    <h3 style="color: #0b5ed7">See all Surface 2-in-1 PCs</h3>
+</div>
+<div class="row" style="margin: 2%">
+    <div class="col-md-6">
+        <video loop controls
+               src="Microsoft%20Surface%20PCs,%20Computers,%20Laptops,%202-in-1s,%20Dual-Screen%20&%20All-in-Ones%20-%20Microsoft%20Surface.mp4"
+               style="width: 100%"></video>
+    </div>
+    <div class="col-md-6 row">
+        <div class="col-md-6">
+            <div class="card p-1"><img
+                    src="https://c.s-microsoft.com/en-us/CMSImages/Surface_Home_DeviceShowcase_F22JB_Color_V1.png?version=9b651b37-60b1-ec15-4e0a-9fcc0ce69762"
+                    class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text"> Surface Pro 8 </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-1"><img
+                    src="https://c.s-microsoft.com/en-us/CMSImages/Surface_Home_DeviceShowcase_F22JB_Color_V1.png?version=9b651b37-60b1-ec15-4e0a-9fcc0ce69762"
+                    class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text"> Surface Pro 7 </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-1"><img
+                    src="https://c.s-microsoft.com/en-us/CMSImages/Surface_Home_DeviceShowcase_F22JB_Color_V1.png?version=9b651b37-60b1-ec15-4e0a-9fcc0ce69762"
+                    class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text"> Surface Pro 3 </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-1"><img
+                    src="https://c.s-microsoft.com/en-us/CMSImages/Surface_Home_DeviceShowcase_F22JB_Color_V1.png?version=9b651b37-60b1-ec15-4e0a-9fcc0ce69762"
+                    class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text"> Surface Pro vip </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <script src="../../../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
