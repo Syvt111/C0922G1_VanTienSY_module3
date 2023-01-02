@@ -1,3 +1,5 @@
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +33,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="employee.jsp" role="button"
-                               data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="employee.jsp" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Employee
                             </a>
@@ -46,8 +47,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="customer.jsp" role="button"
-                               data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="customer.jsp" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Customer
                             </a>
@@ -61,8 +61,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="service.jsp" role="button"
-                               data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="service.jsp" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Service
                             </a>
@@ -76,8 +75,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="contract.jsp" role="button"
-                               data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="contract.jsp" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Contract
                             </a>
@@ -98,7 +96,7 @@
             </div>
         </nav>
     </div>
-    <div class="row body vh-100 bg-light" style="height: 60%">
+    <div class="row body bg-light" style="height: 60%">
         <div class="col-md-4 bg-light">
         </div>
         <div class="col-md-8 bg-info">
@@ -112,3 +110,4 @@
 
 </body>
 </html>
+
