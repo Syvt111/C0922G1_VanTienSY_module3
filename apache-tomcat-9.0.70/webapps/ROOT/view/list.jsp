@@ -5,38 +5,44 @@
 <html>
 <head>
     <title>Product List</title>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
 </head>
 <body>
+<form action="/products">
 <h1>Products</h1>
 <div>
     <a href="/products?action=create">Create new product</a>
 </div>
 <div>
-    <table border="1">
+
+    <input type="text" name="id" value="id" placeholder="Enter id to find">
+    <button type="submit"name="action"value="find">Find</button>
+    <table class="table-light" border="1">
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Maker</th>
-            <th>View</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Maker</th>
+            <th scope="col">View</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         <c:forEach items="${products}" var="product" varStatus="">
             <tr>
-                <td>${product.id}</td>
-                <td>${product.name}</td>
-                <td>${product.price}</td>
-                <td>${product.description}</td>
-                <td>${product.maker}</td>
-                <td><a href="/products?action=view&id=${product.id}">${product.getName()}</a></td>
-                <td><a href="/products?action=edit&id=${product.id}">edit</a></td>
-                <td><a href="/products?action=delete&id=${product.id}">delete</a></td>
+                <td scope="col">${product.id}</td>
+                <td scope="col">${product.name}</td>
+                <td scope="col">${product.price}</td>
+                <td scope="col">${product.description}</td>
+                <td scope="col">${product.maker}</td>
+                <td scope="col"><a href="/products?action=view&id=${product.id}">${product.getName()}</a></td>
+                <td scope="col"><a href="/products?action=edit&id=${product.id}">edit</a></td>
+                <td scope="col"><a href="/products?action=delete&id=${product.id}">delete</a></td>
             </tr>
         </c:forEach>
     </table>
 </div>
-
+</form>
 </body>
+<link rel="stylesheet" href="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js">
 </html>
