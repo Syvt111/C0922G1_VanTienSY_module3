@@ -83,15 +83,15 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("Id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.productService.findById(id);
-        RequestDispatcher dispatcher;
+        RequestDispatcher dispatcher ;
         if(product == null){
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             this.productService.deleteProduct(id);
             try {
-                response.sendRedirect("/product");
+                response.sendRedirect("/products");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -146,7 +146,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("Id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.productService.findById(id);
         RequestDispatcher dispatcher;
         if(product == null){
@@ -163,7 +163,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("Id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.productService.findById(id);
         RequestDispatcher dispatcher;
         if(product == null){
@@ -179,14 +179,14 @@ public class ProductServlet extends HttpServlet {
         }
     }
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("Id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         Product product = this.productService.findById(id);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("product", product);
-            dispatcher = request.getRequestDispatcher("product/view.jsp");
+            dispatcher = request.getRequestDispatcher("view/view.jsp");
         }
         try {
             dispatcher.forward(request, response);

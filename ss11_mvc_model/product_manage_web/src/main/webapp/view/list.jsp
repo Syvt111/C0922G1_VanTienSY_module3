@@ -19,6 +19,7 @@
             <th>Price</th>
             <th>Description</th>
             <th>Maker</th>
+            <th>View</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -29,8 +30,9 @@
                 <td>${product.price}</td>
                 <td>${product.description}</td>
                 <td>${product.maker}</td>
-                <td><a href="/products/?action=edit">edit</a></td>
-                <td><a href="/products/?action=delete">delete</a></td>
+                <td><a href="/products?action=view&id=${product.id}">${product.getName()}</a></td>
+                <td><a href="/products?action=edit&id=${product.id}">edit</a></td>
+                <td><a href="/products?action=delete&id=${product.id}">delete</a></td>
             </tr>
         </c:forEach>
     </table>

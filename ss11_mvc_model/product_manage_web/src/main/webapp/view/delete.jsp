@@ -16,7 +16,7 @@
 <p>
   <a href="/products">Back to product list</a>
 </p>
-<form method="post">
+<form method="post" action="/products?action=delete&id=${product.id}">
   <h3>Are you sure?</h3>
   <fieldset>
     <legend>Product information</legend>

@@ -41,6 +41,6 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public Product findById(int id) {
-        return productList.get(id);
+        return productList.get(id-1);
     }
 }
