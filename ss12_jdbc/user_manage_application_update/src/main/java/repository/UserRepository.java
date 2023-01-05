@@ -4,10 +4,9 @@ import model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class UserService implements IUserRepository {
+public class UserRepository implements IUserRepository {
     private static final String URL ="jdbc:mysql://localhost:3306/user_manage_database"; // sửa lại tên của csdl
     private static final String USER ="root";// mặc định của mysql
     private static final String PASS ="123456";// do cài đặt khi cài đặt mysql
@@ -24,7 +23,7 @@ public class UserService implements IUserRepository {
 
     private static final String INSERT_USERS_SQL = "insert into users(name,email,country)values(?,?,?);";
     private static final String SELECT_USERS_BY_ID = "select id, name, email,country from users where id=?";
-    private static final String SELECT_ALL_USERS = "select*from users";
+    private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id=?;";
     private static final String UPDATE_USERS_SQL = "update users set name=?,email=?,country=? where id=?;";
     private static final String SELECT_USER_BY_COUNTRY = "select id,name,email,country from users where country =?";
@@ -50,7 +49,7 @@ public class UserService implements IUserRepository {
     @Override
     public User selectUser(int id) {
         User user = null;
-        Connection connection = getConnectDB();
+        Connection connection = UserRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USERS_BY_ID);
             preparedStatement.setInt(1,id);

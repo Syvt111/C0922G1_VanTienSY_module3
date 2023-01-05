@@ -29,6 +29,6 @@
         </tr>
     </c:forEach>
 </table>
-<a href="/User?action=select"><h3>Comeback list user</h3></a>
+<a href="/User"><h3>Comeback list user</h3></a>
 </body>
 </html>

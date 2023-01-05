@@ -8,13 +8,18 @@
 <body>
 <center>
     <h1><a href="/users">User Management</a></h1>
-    <h2>
-        <a href="/users?action=create">Add New User</a>
-    </h2>
+
 </center>
+<form action="/users">
+
 <div align="center">
+    <h2>List of Users</h2>
+    <a href="/users?action=create">Add New User</a> <br>
     <table border="1" cellpadding="5">
-        <caption><h2>List of Users</h2></caption>
+        <tr>
+            <input type="text" name="country" placeholder="Enter Country">
+            <button type="submit" name="action" value="find">Find</button>
+        </tr>
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -36,5 +41,6 @@
         </c:forEach>
     </table>
 </div>
+</form>
 </body>
 </html>

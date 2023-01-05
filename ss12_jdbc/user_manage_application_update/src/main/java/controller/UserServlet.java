@@ -1,7 +1,9 @@
 package controller;
 
 import model.User;
-import repository.UserService;
+import repository.UserRepository;
+import service.IUserService;
+import service.UserService;
 
 import java.io.*;
 import java.sql.SQLDataException;
@@ -15,11 +17,9 @@ import javax.servlet.annotation.*;
 @WebServlet(name = "usersServlet", value = "/users")
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private UserService userService;
+    private IUserService userService=new UserService();
 
-    public void innit() {
-        userService = new UserService();
-    }
+
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String action = request.getParameter("action");
@@ -36,7 +36,7 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
-                case "search":
+                case "find":
                     findUser(request, response);
                     break;
                 case "sort":
@@ -73,7 +73,7 @@ public class UserServlet extends HttpServlet {
         List<User> userList = userService.searchByCountry(country);
         request.setAttribute("userList", userList);
         try {
-            request.getRequestDispatcher("view/find.jsp").forward(request, response);
+            request.getRequestDispatcher("user/find.jsp").forward(request, response);
         } catch (ServletException | IOException e) {
             throw new RuntimeException(e);
         }
@@ -126,18 +126,20 @@ public class UserServlet extends HttpServlet {
             }
         }
     }
-    public void insertUser(HttpServletRequest request, HttpServletResponse response) {
+    public void insertUser(HttpServletRequest request, HttpServletResponse response)  {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userService.insertUser(newUser);
+        try {
+            userService.insertUser(newUser);
+        } catch (SQLDataException e) {
+            throw new RuntimeException(e);
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         try {
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             throw new RuntimeException(e);
         }
     }

@@ -2,12 +2,13 @@ package service;
 
 import model.User;
 import repository.IUserRepository;
+import repository.UserRepository;
 
 import java.sql.SQLDataException;
 import java.util.List;
 
 public class UserService implements IUserService{
-    IUserRepository iUserRepository = new repository.UserService();
+    IUserRepository iUserRepository = new UserRepository();
     @Override
     public void insertUser(User user) throws SQLDataException {
         iUserRepository.insertUser(user);
