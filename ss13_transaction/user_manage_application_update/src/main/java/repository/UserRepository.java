@@ -166,4 +166,43 @@ public class UserRepository implements IUserRepository {
         }
     }
 
+    @Override
+    public String addUserTransaction() throws SQLException {
+        String message = "OK, transaction successfully!";
+        Connection connection = getConnectDB();
+        Savepoint savepoint1 = null;
+        Savepoint savepoint2 = null;
+        try {
+            connection.setAutoCommit(false);
+            PreparedStatement psUser = connection.prepareStatement("insert into users(name,email,country)values(?,?,?);");
+            psUser.setString(1, "Owen");
+            psUser.setString(2, "Owen@123");
+            psUser.setString(3, "England");
+            int rowUpdated = psUser.executeUpdate();
+            savepoint1 = connection.setSavepoint();
+
+            PreparedStatement psStaft = connection.prepareStatement("insert into staft(name)values(?);");
+            psStaft.setString(1, "Jon");
+
+            rowUpdated += psStaft.executeUpdate();
+            savepoint2 = connection.setSavepoint();
+            if (rowUpdated ==2){
+                connection.commit();
+            }else{
+                message ="rollback try";
+            }
+
+        } catch (SQLException e) {
+
+            message =  "rollback" ;
+            try {
+                connection.rollback(savepoint1);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            connection.commit();
+        }
+        return message ;
+    }
+
 }

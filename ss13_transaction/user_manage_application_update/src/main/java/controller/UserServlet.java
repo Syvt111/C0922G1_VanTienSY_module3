@@ -38,6 +38,8 @@ public class UserServlet extends HttpServlet {
                 case "sort":
                     sortUser(request, response);
                     break;
+                case "testTransaction" :
+                        testUseTran(request,response);
                 default:
                     listUser(request, response);
                     break;
@@ -154,6 +156,14 @@ public class UserServlet extends HttpServlet {
         } catch (ServletException | IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            userService.addUserTransaction();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 

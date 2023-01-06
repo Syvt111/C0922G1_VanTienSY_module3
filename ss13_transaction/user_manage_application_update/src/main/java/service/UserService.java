@@ -5,6 +5,7 @@ import repository.IUserRepository;
 import repository.UserRepository;
 
 import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserService implements IUserService{
@@ -42,5 +43,11 @@ public class UserService implements IUserService{
     @Override
     public List<User> sortByName() {
         return iUserRepository.sortByName();
+    }
+
+    @Override
+    public String addUserTransaction() throws SQLException {
+
+        return iUserRepository.addUserTransaction();
     }
 }

@@ -3,6 +3,7 @@ package service;
 import model.User;
 
 import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserService {
@@ -13,4 +14,5 @@ public interface IUserService {
     public boolean updateUser(User user) throws SQLDataException;
     List<User> searchByCountry(String country);
     List<User> sortByName();
+    String addUserTransaction() throws SQLException;
 }

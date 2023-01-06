@@ -4,6 +4,7 @@ package repository;
 import model.User;
 
 import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserRepository {
@@ -20,6 +21,6 @@ public interface IUserRepository {
     boolean updateUserByProcedure(User user);
 
     boolean deleteUserByProcedure(int id);
-
+     String addUserTransaction() throws SQLException;
 
 }

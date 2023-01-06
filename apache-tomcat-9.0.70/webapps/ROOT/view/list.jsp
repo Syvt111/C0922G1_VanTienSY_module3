@@ -51,6 +51,7 @@
             </tr>
         </c:forEach>
 </table>
+   <a href="/users?action=testTransaction"><button class="btn btn-outline-dark" type="submit"name="action"value="testTransaction">TestTran</button></a>
 </form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
