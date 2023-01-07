@@ -114,140 +114,66 @@
         </div>
 
         <h1 class="text-center my-3">LIST CUSTOMER </h1>
-        <button type="button" class="btn btn-primary">ADD NEW Customer</button>
+        <div>
+            <button type="submit" class="btn btn-primary" name="action" value="create"><a href="furama?action=create">ADD NEW Customer</a></button>
+        </div>
+        
         <table class="table text-center">
             <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Type</th>
-                <th scope="col">Name</th>
-                <th scope="col">Birthday</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Id-card</th>
-                <th scope="col">Phone-Number</th>
+                <th scope="col">Mã Khách Hàng</th>
+                <th scope="col">Mã Loại Khách</th>
+                <th scope="col">Họ Tên</th>
+                <th scope="col">Ngày Sinh</th>
+                <th scope="col">Giới Tính</th>
+                <th scope="col">Số CMND</th>
+                <th scope="col">Điện Thoại</th>
                 <th scope="col">Email</th>
-                <th scope="col">Address</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody class="table-group-divider">
             <tr>
-                <th scope="row">1</th>
-                <td>diamond</td>
-                <td>Nguyen A</td>
-                <td>12-12-1994</td>
-                <td>Nam</td>
-                <td>123456789</td>
-                <td>0909090909</td>
-                <td>abc@gmail.com</td>
-                <td>Da Nang</td>
-                <td>
-                    <button type="button" class="btn btn-primary">EDIT</button>
-                </td>
-                <td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        DELETE
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure ?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
-                                    <button type="button" class="btn btn-primary">No</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>diamond</td>
-                <td>Nguyen A</td>
-                <td>12-12-1994</td>
-                <td>Nam</td>
-                <td>123456789</td>
-                <td>0909090909</td>
-                <td>abc@gmail.com</td>
-                <td>Da Nang</td>
-                <td>
-                    <button type="button" class="btn btn-primary">EDIT</button>
-                </td>
-                <td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        DELETE
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure ?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
-                                    <button type="button" class="btn btn-primary">No</button>
+                <c:forEach var="customer" items="${CustomerList}">
+                    <th>${customer.ma_khach_hang}</th>
+                    <td>${customer.ma_loai_khach}</td>
+                    <td>${customer.ho_ten}</td>
+                    <td>${customer.ngay_sinh}</td>
+                    <td>${customer.so_cmnd}</td>
+                    <td>${customer.so_dien_thoai}</td>
+                    <td>${customer.emai}</td>
+                    <td>${customer.dia_chi}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">EDIT</button>
+                    </td>
+                    <td>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            DELETE
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
+                                        <button type="button" class="btn btn-primary">No</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </td>
+                    </td>
             </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>diamond</td>
-                <td>Nguyen A</td>
-                <td>12-12-1994</td>
-                <td>Nam</td>
-                <td>123456789</td>
-                <td>0909090909</td>
-                <td>abc@gmail.com</td>
-                <td>Da Nang</td>
-                <td>
-                    <button type="button" class="btn btn-primary">EDIT</button>
-                </td>
-                <td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        DELETE
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure ?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
-                                    <button type="button" class="btn btn-primary">No</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+                </c:forEach>
+
             </tbody>
         </table>
     </div>
