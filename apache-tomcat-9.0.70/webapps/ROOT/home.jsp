@@ -17,8 +17,8 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <body>
 
-<div class="row header ">
-    <div class="row bg-danger ">
+<div class="row vh-100 ">
+    <div class="row bg-danger " style="height: 15%">
         <div class="col-md-2">
             <a class="navbar-brand d-flex justify-content-between" href="/furama"
                style="font-family: Broadway,serif">Furama</a>
@@ -31,7 +31,7 @@
         </div>
 
     </div>
-    <div class="row header-link ">
+    <div class="header-link " style="height: 10%">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,7 +57,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="customer.jsp" role="button"
+                            <a class="nav-link dropdown-toggle" href="/furama/view/customer/customerList.jsp" role="button"
                                data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Customer
@@ -109,77 +109,20 @@
             </div>
         </nav>
     </div>
-    <div class="row body bg-light ">
-               <p class="text-center my-3">LIST CUSTOMER </p>
-        <div>
-            <button type="submit" class="btn btn-light" name="action" value="create"><a href="furama?action=create">ADD NEW Customer</a></button>
+    <div class="row body vh-100 bg-light " style="height: 60%; padding: 2%">
+        <div class="col-md-4 bg-light"></div>
+        <div class="col-md-8 bg-light">
+            <img src="furama.jpg" alt="home">
         </div>
-        
-        <table class="table text-center">
-            <thead>
-            <tr>
-                <th scope="col">Mã Khách Hàng</th>
-                <th scope="col">Mã Loại Khách</th>
-                <th scope="col">Họ Tên</th>
-                <th scope="col">Ngày Sinh</th>
-                <th scope="col">Giới Tính</th>
-                <th scope="col">Số CMND</th>
-                <th scope="col">Điện Thoại</th>
-                <th scope="col">Email</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <tbody class="table-group-divider">
-            <tr>
-                <c:forEach var="customer" items="${CustomerList}">
-                    <th>${customer.ma_khach_hang}</th>
-                    <td>${customer.ma_loai_khach}</td>
-                    <td>${customer.ho_ten}</td>
-                    <td>${customer.ngay_sinh}</td>
-                    <td>${customer.so_cmnd}</td>
-                    <td>${customer.so_dien_thoai}</td>
-                    <td>${customer.email}</td>
-                    <td>${customer.dia_chi}</td>
-                    <td>
-                        <button type="button" class="btn btn-primary">EDIT</button>
-                    </td>
-                    <td>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            DELETE
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5">Modal title</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Are you sure ?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yes</button>
-                                        <button type="button" class="btn btn-primary">No</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-            </tr>
-                </c:forEach>
 
-            </tbody>
-        </table>
     </div>
-    <div class="footer">
+    <div class="footer " style="height: 10%">
         <a class="col d-flex justify-content-center">Footer</a>
     </div>
 </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </html>

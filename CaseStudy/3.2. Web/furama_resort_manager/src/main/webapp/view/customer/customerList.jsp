@@ -17,21 +17,21 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <body>
 
-<div class="row vh-100 ">
-    <div class="row bg-danger " style="height: 15%">
+<div class="row header ">
+    <div class="row bg-danger ">
         <div class="col-md-2">
-            <a class="navbar-brand d-flex justify-content-between" href="#"
+            <a class="navbar-brand d-flex justify-content-between" href="/furama"
                style="font-family: Broadway,serif">Furama</a>
         </div>
         <div class="col-md-8">
 
         </div>
         <div class="col-md-2 d-flex justify-content-center " style="margin-top: 35px; ">
-            <a class="nav-link active d-flex justify-content-between" href="#">Van Tien Sy</a>
+            <a class="nav-link active d-flex justify-content-between" href="/furama/syvt">Van Tien Sy</a>
         </div>
 
     </div>
-    <div class="header-link " style="height: 10%">
+    <div class="row header-link ">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -109,13 +109,10 @@
             </div>
         </nav>
     </div>
-    <div class="row body vh-100 bg-light " style="height: 60%; padding: 2%">
-        <div class="col-md-4 bg-light">
-        </div>
-
-        <h1 class="text-center my-3">LIST CUSTOMER </h1>
+    <div class="row body bg-light ">
+               <p class="text-center my-3">LIST CUSTOMER </p>
         <div>
-            <button type="submit" class="btn btn-primary" name="action" value="create"><a href="furama?action=create">ADD NEW Customer</a></button>
+            <button type="submit" class="btn btn-light" name="action" value="create"><a href="furama?action=create">ADD NEW Customer</a></button>
         </div>
         
         <table class="table text-center">
@@ -141,7 +138,7 @@
                     <td>${customer.ngay_sinh}</td>
                     <td>${customer.so_cmnd}</td>
                     <td>${customer.so_dien_thoai}</td>
-                    <td>${customer.emai}</td>
+                    <td>${customer.email}</td>
                     <td>${customer.dia_chi}</td>
                     <td>
                         <button type="button" class="btn btn-primary">EDIT</button>
@@ -177,7 +174,7 @@
             </tbody>
         </table>
     </div>
-    <div class="footer " style="height: 10%">
+    <div class="footer">
         <a class="col d-flex justify-content-center">Footer</a>
     </div>
 </div>

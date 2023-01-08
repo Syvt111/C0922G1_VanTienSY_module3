@@ -19,7 +19,7 @@ body{
 }
 
 .header-link{
-    height: 30px;
+    height: 100px;
     line-height: 30px;
     padding-left: 10px;
     padding-right: 10px;
@@ -57,7 +57,7 @@ body{
 }
 
 .footer{
-    height: 50px;
+    height: 100px;
     clear: both;
     border: 1px solid #CDCDCD;
     background-color: #F8F8FF;

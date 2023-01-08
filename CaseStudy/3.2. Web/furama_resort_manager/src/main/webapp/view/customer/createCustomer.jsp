@@ -17,21 +17,21 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <body>
 
-<div class="row vh-100 ">
-  <div class="row bg-danger " style="height: 15%">
+<div class="row">
+  <div class="row header bg-danger " style="height: 15%">
     <div class="col-md-2">
-      <a class="navbar-brand d-flex justify-content-between" href="#"
+      <a class="navbar-brand d-flex justify-content-between" href="/furama"
          style="font-family: Broadway,serif">Furama</a>
     </div>
     <div class="col-md-8">
 
     </div>
     <div class="col-md-2 d-flex justify-content-center " style="margin-top: 35px; ">
-      <a class="nav-link active d-flex justify-content-between" href="#">Van Tien Sy</a>
+      <a class="nav-link active d-flex justify-content-between" href="/furama/syvt">Van Tien Sy</a>
     </div>
 
   </div>
-  <div class="header-link " style="height: 10%">
+  <div class="row header-link ">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,7 +57,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link dropdown-toggle" href="customer.jsp" role="button"
+              <a class="nav-link dropdown-toggle" href="/furama" role="button"
                  data-bs-toggle="dropdown"
                  aria-expanded="false">
                 Customer
@@ -109,60 +109,60 @@
       </div>
     </nav>
   </div>
-  <div class="row body vh-100 bg-light " style="height: 60%; padding: 2%">
+  <div class="row body " style="height: 60%; padding: 2%">
     <div class="col-md-4 bg-light">
     </div>
     <h1 class="text-center my-3"> Thêm Mới Khách Hàng </h1>
-    <h2>
-      <a href="furama?action=view/customer/customerList.jsp">List All Users</a>
-    </h2>
+    <p>
+      <a href="customerList.jsp">List All Customer</a>
+    </p>
     <form method="post">
       <table class="table table-striped">
 
         <tr>
           <th>Mã Loại Khách :</th>
           <td>
-            <input type="text" name="ma_loai_khach" id="ma_loai_khach" size="45"/>
+            <input type="text" name="ma_loai_khach" id="ma_loai_khach" />
           </td>
         </tr>
         <tr>
           <th>Họ Tên :</th>
           <td>
-            <input type="text" name="ho_ten" id="ho_ten" size="45"/>
+            <input type="text" name="ho_ten" id="ho_ten" />
           </td>
         </tr>
         <tr>
           <th>Ngày Sinh :</th>
           <td>
-            <input type="text" name="ngay_sinh" id="ngay_sinh" size="15"/>
+            <input type="text" name="ngay_sinh" id="ngay_sinh" s>
           </td>
         </tr> <tr>
           <th>Giới Tính :</th>
           <td>
-            <input type="text" name="gioi_tinh" id="gioi_tinh" size="15"/>
+            <input type="text" name="gioi_tinh" id="gioi_tinh" />
           </td>
         </tr></tr>
         <tr>
           <th>Số CMND :</th>
           <td>
-            <input type="text" name="so_cmnd" id="so_cmnd" size="15"/>
+            <input type="text" name="so_cmnd" id="so_cmnd" />
           </td>
         </tr> <tr>
           <th>Số Điện Thoại :</th>
           <td>
-            <input type="text" name="so_dien_thoai" id="so_dien_thoai" size="15"/>
+            <input type="text" name="so_dien_thoai" id="so_dien_thoai" />
           </td>
         </tr>
         <tr>
           <th>Email :</th>
           <td>
-            <input type="text" name="email" id="email" size="15"/>
+            <input type="text" name="email" id="email" />
           </td>
         </tr>
         <tr>
           <th>Địa Chỉ :</th>
           <td>
-            <input type="text" name="dia_chi" id="dia_chi" size="15"/>
+            <input type="text" name="dia_chi" id="dia_chi"/>
           </td>
         </tr>
         <tr>
@@ -174,7 +174,7 @@
     </form>
 
   </div>
-  <div class="footer " style="height: 10%">
+  <div class="row footer ">
     <a class="col d-flex justify-content-center">Footer</a>
   </div>
 </div>

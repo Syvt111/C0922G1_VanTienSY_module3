@@ -250,7 +250,7 @@
             </tbody>
         </table>
     </div>
-    <div class="footer " style="height: 10%">
+    <div class="footer ">
         <a class="col d-flex justify-content-center">Footer</a>
     </div>
 </div>

@@ -45,10 +45,10 @@ public class CustomerRepository implements ICustomerRepository {
                  String ho_ten = resultSet.getString("ho_ten");
                  String ngay_sinh = resultSet.getString("ngay_sinh");
                  String gioi_tinh = resultSet.getString("gioi_tinh") ;
-                 String so_cmnd= resultSet.getString("so_cmnd");
-                 String so_dien_thoai= resultSet.getString("so_dien_thoai");
+                 String so_cmnd = resultSet.getString("so_cmnd");
+                 String so_dien_thoai = resultSet.getString("so_dien_thoai");
                  String email= resultSet.getString("email");
-                 String dia_chi= resultSet.getString("dia_chi");
+                 String dia_chi = resultSet.getString("dia_chi");
                  Customer customer = new Customer(ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi) ;
                  customerList.add(customer);
             }
