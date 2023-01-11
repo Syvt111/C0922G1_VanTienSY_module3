@@ -5,13 +5,13 @@ public class Customer {
     private int ma_loai_khach;
     private String ho_ten;
     private String ngay_sinh;
-    private String gioi_tinh;
+    private byte gioi_tinh;
     private String so_cmnd;
     private String so_dien_thoai;
     private String email;
     private String dia_chi;
 
-    public Customer(int ma_loai_khach, String ho_ten, String ngay_sinh, String gioi_tinh,
+    public Customer(int ma_loai_khach, String ho_ten, String ngay_sinh, byte gioi_tinh,
                     String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
         this.ma_loai_khach = ma_loai_khach;
         this.ho_ten = ho_ten;
@@ -24,7 +24,7 @@ public class Customer {
 
     }
 
-    public Customer(int ma_khach_hang, int ma_loai_khach, String ho_ten, String ngay_sinh, String gioi_tinh,
+    public Customer(int ma_khach_hang, int ma_loai_khach, String ho_ten, String ngay_sinh, byte gioi_tinh,
                     String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
         this.ma_khach_hang = ma_khach_hang;
         this.ma_loai_khach = ma_loai_khach;
@@ -53,7 +53,7 @@ public class Customer {
         return ngay_sinh;
     }
 
-    public String getGioi_tinh() {
+    public byte getGioi_tinh() {
         return gioi_tinh;
     }
 
@@ -89,7 +89,7 @@ public class Customer {
         this.ngay_sinh = ngay_sinh;
     }
 
-    public void setGioi_tinh(String gioi_tinh) {
+    public void setGioi_tinh(byte gioi_tinh) {
         this.gioi_tinh = gioi_tinh;
     }
 

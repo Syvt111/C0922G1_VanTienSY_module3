@@ -20,7 +20,7 @@
 <div class="row vh-100 ">
     <div class="row bg-danger " style="height: 15%">
         <div class="col-md-2">
-            <a class="navbar-brand d-flex justify-content-between" href="/furama"
+            <a class="navbar-brand d-flex justify-content-between" href="home.jsp"
                style="font-family: Broadway,serif">Furama</a>
         </div>
         <div class="col-md-8">
@@ -57,33 +57,33 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="/furama/view/customer/customerList.jsp" role="button"
+                            <a class="nav-link dropdown-toggle" href="/customer/view/customer/customerList.jsp" role="button"
                                data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Customer
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="/customer">Action</a></li>
+                                <li><a class="dropdown-item" href="/customer">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="/customer">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown-toggle" href="service.jsp" role="button"
+                            <a class="nav-link dropdown-toggle" href="/facility" role="button"
                                data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Service
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="/facility">Action</a></li>
+                                <li><a class="dropdown-item" href="/facility">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="/facility">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -112,7 +112,8 @@
     <div class="row body vh-100 bg-light " style="height: 60%; padding: 2%">
         <div class="col-md-4 bg-light"></div>
         <div class="col-md-8 bg-light">
-            <img src="furama.jpg" alt="home">
+
+            <img src="http://vteambuilding.com/wp-content/uploads/2019/10/1-9.png" >
         </div>
 
     </div>

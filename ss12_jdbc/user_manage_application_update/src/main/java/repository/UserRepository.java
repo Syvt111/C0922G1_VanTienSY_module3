@@ -74,7 +74,6 @@ public class UserRepository implements IUserRepository {
         Connection connection = getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);
-            System.out.println(preparedStatement);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("id");

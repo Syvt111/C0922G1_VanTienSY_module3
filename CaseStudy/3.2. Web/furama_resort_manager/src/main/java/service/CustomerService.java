@@ -12,13 +12,14 @@ public class CustomerService implements ICustomerService{
    ICustomerRepository customerRepository = new CustomerRepository();
 
     @Override
-    public void insertUser(Customer customer) throws SQLDataException {
-        customerRepository.insertUser(customer);
+    public boolean insertUser(Customer customer) throws SQLDataException {
+        return customerRepository.insertUser(customer);
     }
 
     @Override
     public Customer selectCustomer(int id) {
-        return null;
+
+        return customerRepository.selectCustomer(id);
     }
 
     @Override
@@ -28,12 +29,12 @@ public class CustomerService implements ICustomerService{
 
     @Override
     public boolean deleteCustomer(int id) throws SQLDataException {
-        return false;
+        return customerRepository.deleteCustomer(id);
     }
 
     @Override
     public boolean updateCustomer(Customer customer) throws SQLDataException {
-        return false;
+        return customerRepository.updateCustomer(customer);
     }
 
 }

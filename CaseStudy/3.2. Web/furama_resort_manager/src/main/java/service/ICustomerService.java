@@ -6,7 +6,7 @@ import java.sql.SQLDataException;
 import java.util.List;
 
 public interface ICustomerService {
-    void insertUser(Customer customer) throws SQLDataException;
+    boolean insertUser(Customer customer) throws SQLDataException;
     Customer selectCustomer(int id);
     List<Customer> selectAllCustomer();
     boolean deleteCustomer(int id) throws SQLDataException;
